@@ -1,7 +1,6 @@
 var FrameUI = function()
 {
 	var self = this;
-	self.developmentTree = new DevelopmentTreeUI();
 	self.toneMatcher = new ToneMatcherUI();
 	self.noise = new NoiseUI();
 	self.acrn = new ACRNUI();
@@ -10,8 +9,7 @@ var FrameUI = function()
 ##	{name:'Tone Matcher'}
 ##	{name:'Noise'}
 	{name:'ACRN'}
-	*/
-	}));
+	*/}));
 
 	// early ui setup
 	// ==========
@@ -401,7 +399,6 @@ var FrameUI = function()
         // attach pages
         // ----------
 
-		self.developmentTree.Attach(R("#page"));
 		self.toneMatcher.Attach(R("#page"));
 		self.noise.Attach(R("#page"));
 		self.acrn.Attach(R("#page"));
