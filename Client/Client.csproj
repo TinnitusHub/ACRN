@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{31FDE627-A883-47BF-89AF-0AC98364850C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Main</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60916</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60916/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="#Ancient\CreativeDefense\Live.js" />
+    <Content Include="#Ancient\CreativeDefense\Live\UnitPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Live\UnitsPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Live\ViewerPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Maps.js" />
+    <Content Include="#Ancient\CreativeDefense\Maps\MapsPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Maps\RegionsPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Maps\SoilsPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Maps\ToolsPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Maps\ViewerPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Matches.js" />
+    <Content Include="#Ancient\CreativeDefense\Matches\NewPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Units.js" />
+    <Content Include="#Ancient\CreativeDefense\Units\PartPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Units\PartsPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Units\TargetsPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Units\TasksPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Units\UnitsPanel.js" />
+    <Content Include="#Ancient\CreativeDefense\Units\ViewerPanel.js" />
+    <Content Include="#Ancient\Frame2\Console.js" />
+    <Content Include="#Ancient\Frame2\MainMenu.js" />
+    <Content Include="#Ancient\Frame2\Settings.js" />
+    <Content Include="Games\CreativeDefense\DevelopmentTree\DevelopmentTree.js" />
+    <Content Include="Main.html" />
+    <Content Include="Main.js" />
+    <Content Include="Others\Tools\ACRN\ACRNData.js" />
+    <Content Include="Others\Tools\ToneMatcher\ToneMatcher.js" />
+    <Content Include="Others\Tools\Noise\#Ancient\ACRN.js" />
+    <Content Include="Others\Tools\Noise\#Ancient\crn.css" />
+    <Content Include="Others\Tools\Noise\#Ancient\desktop.js" />
+    <Content Include="Others\Tools\Noise\#Ancient\mobile.js" />
+    <Content Include="Others\Tools\Noise\#Ancient\VNoise.html" />
+    <Content Include="Others\Tools\ACRN\ACRN.js" />
+    <Content Include="Others\Tools\Noise\NoiseData.js" />
+    <Content Include="Others\Tools\Noise\Noise.js" />
+    <Content Include="Packages\#Ancient\images\animated-overlay.gif" />
+    <Content Include="Packages\#Ancient\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Packages\#Ancient\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Packages\#Ancient\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Packages\#Ancient\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Packages\#Ancient\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Packages\#Ancient\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Packages\#Ancient\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Packages\#Ancient\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Packages\#Ancient\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Packages\#Ancient\images\ui-icons_222222_256x240.png" />
+    <Content Include="Packages\#Ancient\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Packages\#Ancient\images\ui-icons_9b9b9b_256x240.png" />
+    <Content Include="Packages\#Ancient\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Packages\#Ancient\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Packages\#Ancient\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Packages\#Ancient\JQueryUI.css" />
+    <Content Include="Packages\AngularJS\AngularJS.js" />
+    <Content Include="Packages\AngularJS\ScrollView.js" />
+    <Content Include="Packages\Audiolet\Audiolet.js" />
+    <Content Include="Packages\Audiolet\Audiolet.min.js" />
+    <Content Include="Packages\Bootstrap\.gitignore" />
+    <Content Include="Packages\Bootstrap\assets\css\docs.css" />
+    <Content Include="Packages\Bootstrap\assets\css\pygments-manni.css" />
+    <Content Include="Packages\Bootstrap\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Packages\Bootstrap\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Packages\Bootstrap\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Packages\Bootstrap\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Packages\Bootstrap\assets\ico\favicon.png" />
+    <Content Include="Packages\Bootstrap\assets\js\application.js" />
+    <Content Include="Packages\Bootstrap\assets\js\customizer.js" />
+    <Content Include="Packages\Bootstrap\assets\js\holder.js" />
+    <Content Include="Packages\Bootstrap\assets\js\html5shiv.js" />
+    <Content Include="Packages\Bootstrap\assets\js\jquery.bbq.min.js" />
+    <Content Include="Packages\Bootstrap\assets\js\jquery.js" />
+    <Content Include="Packages\Bootstrap\assets\js\jszip.js" />
+    <Content Include="Packages\Bootstrap\assets\js\less.js" />
+    <Content Include="Packages\Bootstrap\assets\js\respond.min.js" />
+    <Content Include="Packages\Bootstrap\assets\js\uglify.js" />
+    <Content Include="Packages\Bootstrap\components.html" />
+    <Content Include="Packages\Bootstrap\css.html" />
+    <Content Include="Packages\Bootstrap\customize.html" />
+    <Content Include="Packages\Bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Packages\Bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Packages\Bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Packages\Bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Packages\Bootstrap\examples\carousel\carousel.css" />
+    <Content Include="Packages\Bootstrap\examples\carousel\index.html" />
+    <Content Include="Packages\Bootstrap\examples\grid\grid.css" />
+    <Content Include="Packages\Bootstrap\examples\grid\index.html" />
+    <Content Include="Packages\Bootstrap\examples\jumbotron-narrow\index.html" />
+    <Content Include="Packages\Bootstrap\examples\jumbotron-narrow\jumbotron-narrow.css" />
+    <Content Include="Packages\Bootstrap\examples\jumbotron\index.html" />
+    <Content Include="Packages\Bootstrap\examples\jumbotron\jumbotron.css" />
+    <Content Include="Packages\Bootstrap\examples\justified-nav\index.html" />
+    <Content Include="Packages\Bootstrap\examples\justified-nav\justified-nav.css" />
+    <Content Include="Packages\Bootstrap\examples\navbar-fixed-top\index.html" />
+    <Content Include="Packages\Bootstrap\examples\navbar-fixed-top\navbar-fixed-top.css" />
+    <Content Include="Packages\Bootstrap\examples\navbar-static-top\index.html" />
+    <Content Include="Packages\Bootstrap\examples\navbar-static-top\navbar-static-top.css" />
+    <Content Include="Packages\Bootstrap\examples\navbar\index.html" />
+    <Content Include="Packages\Bootstrap\examples\navbar\navbar.css" />
+    <Content Include="Packages\Bootstrap\examples\non-responsive\index.html" />
+    <Content Include="Packages\Bootstrap\examples\non-responsive\non-responsive.css" />
+    <Content Include="Packages\Bootstrap\examples\offcanvas\index.html" />
+    <Content Include="Packages\Bootstrap\examples\offcanvas\offcanvas.css" />
+    <Content Include="Packages\Bootstrap\examples\offcanvas\offcanvas.js" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\carousel.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\grid.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\jumbotron-narrow.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\jumbotron.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\justified-nav.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\navbar-fixed.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\navbar-static.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\navbar.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\non-responsive.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\offcanvas.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\sign-in.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\starter-template.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\sticky-footer-navbar.jpg" />
+    <Content Include="Packages\Bootstrap\examples\screenshots\sticky-footer.jpg" />
+    <Content Include="Packages\Bootstrap\examples\signin\index.html" />
+    <Content Include="Packages\Bootstrap\examples\signin\signin.css" />
+    <Content Include="Packages\Bootstrap\examples\starter-template\index.html" />
+    <Content Include="Packages\Bootstrap\examples\starter-template\starter-template.css" />
+    <Content Include="Packages\Bootstrap\examples\sticky-footer-navbar\index.html" />
+    <Content Include="Packages\Bootstrap\examples\sticky-footer-navbar\sticky-footer-navbar.css" />
+    <Content Include="Packages\Bootstrap\examples\sticky-footer\index.html" />
+    <Content Include="Packages\Bootstrap\examples\sticky-footer\sticky-footer.css" />
+    <Content Include="Packages\Bootstrap\getting-started.html" />
+    <Content Include="Packages\Bootstrap\Gruntfile.js" />
+    <Content Include="Packages\Bootstrap\index.html" />
+    <Content Include="Packages\Bootstrap\javascript.html" />
+    <Content Include="Packages\Bootstrap\js\affix.js" />
+    <Content Include="Packages\Bootstrap\js\alert.js" />
+    <Content Include="Packages\Bootstrap\js\button.js" />
+    <Content Include="Packages\Bootstrap\js\carousel.js" />
+    <Content Include="Packages\Bootstrap\js\collapse.js" />
+    <Content Include="Packages\Bootstrap\js\dropdown.js" />
+    <Content Include="Packages\Bootstrap\js\modal.js" />
+    <Content Include="Packages\Bootstrap\js\popover.js" />
+    <Content Include="Packages\Bootstrap\js\scrollspy.js" />
+    <Content Include="Packages\Bootstrap\js\tab.js" />
+    <Content Include="Packages\Bootstrap\js\tests\index.html" />
+    <Content Include="Packages\Bootstrap\js\tests\phantom.js" />
+    <Content Include="Packages\Bootstrap\js\tests\server.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\affix.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\alert.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\button.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\carousel.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\collapse.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\dropdown.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\modal.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\phantom.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\popover.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\scrollspy.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\tab.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\tooltip.js" />
+    <Content Include="Packages\Bootstrap\js\tests\unit\transition.js" />
+    <Content Include="Packages\Bootstrap\js\tests\vendor\jquery.js" />
+    <Content Include="Packages\Bootstrap\js\tests\vendor\qunit.css" />
+    <Content Include="Packages\Bootstrap\js\tests\vendor\qunit.js" />
+    <Content Include="Packages\Bootstrap\js\tooltip.js" />
+    <Content Include="Packages\Bootstrap\js\transition.js" />
+    <Content Include="Packages\Bootstrap\_includes\ads.html" />
+    <Content Include="Packages\Bootstrap\_includes\footer.html" />
+    <Content Include="Packages\Bootstrap\_includes\header.html" />
+    <Content Include="Packages\Bootstrap\_includes\nav-components.html" />
+    <Content Include="Packages\Bootstrap\_includes\nav-css.html" />
+    <Content Include="Packages\Bootstrap\_includes\nav-customize.html" />
+    <Content Include="Packages\Bootstrap\_includes\nav-getting-started.html" />
+    <Content Include="Packages\Bootstrap\_includes\nav-javascript.html" />
+    <Content Include="Packages\Bootstrap\_includes\nav-main.html" />
+    <Content Include="Packages\Bootstrap\_includes\old-bs-docs.html" />
+    <Content Include="Packages\Bootstrap\_includes\social-buttons.html" />
+    <Content Include="Packages\Bootstrap\_layouts\default.html" />
+    <Content Include="Packages\Bootstrap\_layouts\home.html" />
+    <Content Include="Packages\General\ClassExtensions.js" />
+    <Content Include="Packages\General\Globals.css" />
+    <Content Include="Packages\General\Globals.js" />
+    <Content Include="Packages\Images\Arrows\BottomLeftArrow_16_White.png" />
+    <Content Include="Packages\Images\Arrows\BottomLeftArrow_256_White.png" />
+    <Content Include="Packages\Images\Arrows\TopRightArrow_16_White.png" />
+    <Content Include="Packages\Images\Arrows\TopRightArrow_256_White.png" />
+    <Content Include="Packages\Images\Arrows\UpArrow_16_White.png" />
+    <Content Include="Packages\Images\Arrows\UpArrow_256_White.png" />
+    <Content Include="Packages\Images\Basic\Transparent.png" />
+    <Content Include="Packages\Images\Basic\White.png" />
+    <Content Include="Packages\Images\Buttons\Brush.png" />
+    <Content Include="Packages\Images\Buttons\Build.png" />
+    <Content Include="Packages\Images\Buttons\Close.png" />
+    <Content Include="Packages\Images\Buttons\Cube.png" />
+    <Content Include="Packages\Images\Buttons\Dig.png" />
+    <Content Include="Packages\Images\Buttons\Edit.png" />
+    <Content Include="Packages\Images\Buttons\Exit.png" />
+    <Content Include="Packages\Images\Buttons\Grass.png" />
+    <Content Include="Packages\Images\Buttons\Home.png" />
+    <Content Include="Packages\Images\Buttons\Inventory.png" />
+    <Content Include="Packages\Images\Buttons\Leaf.png" />
+    <Content Include="Packages\Images\Buttons\Menu.png" />
+    <Content Include="Packages\Images\Buttons\Minus.png" />
+    <Content Include="Packages\Images\Buttons\Minus_Old.png" />
+    <Content Include="Packages\Images\Buttons\Mountain.png" />
+    <Content Include="Packages\Images\Buttons\Pause.png" />
+    <Content Include="Packages\Images\Buttons\Play.png" />
+    <Content Include="Packages\Images\Buttons\Plus.png" />
+    <Content Include="Packages\Images\Buttons\Plus_Old.png" />
+    <Content Include="Packages\Images\Buttons\ResizeBlock.png" />
+    <Content Include="Packages\Images\Buttons\Right.png" />
+    <Content Include="Packages\Images\Buttons\Right_Large.png" />
+    <Content Include="Packages\Images\Buttons\Right_Old.png" />
+    <Content Include="Packages\Images\Buttons\Save.png" />
+    <Content Include="Packages\Images\Buttons\Select.png" />
+    <Content Include="Packages\Images\Buttons\Select_Old.png" />
+    <Content Include="Packages\Images\Buttons\Settings.png" />
+    <Content Include="Packages\Images\Buttons\Times2.png" />
+    <Content Include="Packages\Images\Buttons\Up.png" />
+    <Content Include="Packages\Images\Buttons\Up_Large.png" />
+    <Content Include="Packages\Images\Buttons\Up_Old.png" />
+    <Content Include="Packages\Images\Buttons\Wood.png" />
+    <Content Include="Packages\Images\Buttons\World.png" />
+    <Content Include="Packages\Images\Buttons\X.png" />
+    <Content Include="Packages\Images\ContextMenus\Add.png" />
+    <Content Include="Packages\Images\ContextMenus\Cut.png" />
+    <Content Include="Packages\Images\ContextMenus\Delete.png" />
+    <Content Include="Packages\Images\ContextMenus\Paste.png" />
+    <Content Include="Packages\Images\Icons\CS_Red.png" />
+    <Content Include="Packages\Images\Icons\CS_White.png" />
+    <Content Include="Packages\Images\Icons\Folder.png" />
+    <Content Include="Packages\Images\Icons\Folder2.png" />
+    <Content Include="Packages\Images\Icons\JS_Green.png" />
+    <Content Include="Packages\Images\Icons\JS_White.png" />
+    <Content Include="Packages\Images\Icons\Metal.png" />
+    <Content Include="Packages\Images\Icons\Transparent.png" />
+    <Content Include="Packages\Images\Icons\Wood.png" />
+    <Content Include="Packages\Images\Preloaders\1_OnBlack.gif" />
+    <Content Include="Packages\Images\Preloaders\1_OnWhite.gif" />
+    <Content Include="Packages\Images\Preloaders\2_Sprite.png" />
+    <Content Include="Packages\Images\Preloaders\Loading.gif" />
+    <Content Include="Packages\Images\Preloaders\Loading_2.gif" />
+    <Content Include="Packages\Images\Tiling\Menu\#Base\Menu.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B110.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B120.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B130.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B140.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B150.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B200.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B250.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B300.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B70.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B80.png" />
+    <Content Include="Packages\Images\Tiling\Menu\Menu_B90.png" />
+    <Content Include="Packages\JQueryEditable\contributed\jquery.jeditable.datepicker.js" />
+    <Content Include="Packages\JQueryEditable\contributed\jquery.jeditable.selectdate.js" />
+    <Content Include="Packages\JQueryEditable\contributed\jquery.jeditable.ui-datepicker.js" />
+    <Content Include="Packages\JQueryEditable\css\datePicker.css" />
+    <Content Include="Packages\JQueryEditable\css\jquery.autocomplete.css" />
+    <Content Include="Packages\JQueryEditable\custom.html" />
+    <Content Include="Packages\JQueryEditable\custom_autocomplete.html" />
+    <Content Include="Packages\JQueryEditable\default.html" />
+    <Content Include="Packages\JQueryEditable\img\calendar.png" />
+    <Content Include="Packages\JQueryEditable\img\indicator.gif" />
+    <Content Include="Packages\JQueryEditable\jquery.jeditable.ajaxupload.js" />
+    <Content Include="Packages\JQueryEditable\jquery.jeditable.autogrow.js" />
+    <Content Include="Packages\JQueryEditable\jquery.jeditable.charcounter.js" />
+    <Content Include="Packages\JQueryEditable\jquery.jeditable.datepicker.js" />
+    <Content Include="Packages\JQueryEditable\jquery.jeditable.js" />
+    <Content Include="Packages\JQueryEditable\jquery.jeditable.masked.js" />
+    <Content Include="Packages\JQueryEditable\jquery.jeditable.time.js" />
+    <Content Include="Packages\JQueryEditable\jquery.jeditable.timepicker.js" />
+    <Content Include="Packages\JQueryEditable\js\jquery.jeditable.inputs.js" />
+    <Content Include="Packages\JQueryEditable\js\jquery.jeditable.js" />
+    <Content Include="Packages\JQueryEditable\js\jquery.js" />
+    <Content Include="Packages\JQueryEditable\js\jquery.maskedinput.js" />
+    <Content Include="Packages\JQueryEditable\js\jquery.timepicker.js" />
+    <Content Include="Packages\JQueryFancyTree\Core.js" />
+    <Content Include="Packages\JQueryFancyTree\DND.js" />
+    <Content Include="Packages\JQueryFancyTree\Lion\Core.css" />
+    <Content Include="Packages\JQueryFancyTree\Lion\icons_original.gif" />
+    <Content Include="Packages\JQueryFancyTree\Lion\loading.gif" />
+    <Content Include="Packages\JQueryFancyTree\Main\Accept.png" />
+    <Content Include="Packages\JQueryFancyTree\Main\Cancel.png" />
+    <Content Include="Packages\JQueryFancyTree\Main\Check_Old.png" />
+    <Content Include="Packages\JQueryFancyTree\Main\Core.css" />
+    <Content Include="Packages\JQueryFancyTree\Main\Down.png" />
+    <Content Include="Packages\JQueryFancyTree\Main\DropArrow.png" />
+    <Content Include="Packages\JQueryFancyTree\Main\DropMarker.gif" />
+    <Content Include="Packages\JQueryFancyTree\Main\DropMarker_Copy.gif" />
+    <Content Include="Packages\JQueryFancyTree\Main\DropMarker_DropAt.gif" />
+    <Content Include="Packages\JQueryFancyTree\Main\DropMarker_Move.gif" />
+    <Content Include="Packages\JQueryFancyTree\Main\Folder.png" />
+    <Content Include="Packages\JQueryFancyTree\Main\icons.gif" />
+    <Content Include="Packages\JQueryFancyTree\Main\icons_original.gif" />
+    <Content Include="Packages\JQueryFancyTree\Main\loading.gif" />
+    <Content Include="Packages\JQueryFancyTree\Main\Right.png" />
+    <Content Include="Packages\JQueryFancyTree\Main\Transparent.png" />
+    <Content Include="Packages\JQueryFancyTree\Main\zTreeStandard.png" />
+    <Content Include="Packages\JQueryScrollbar\JQueryScrollbar.css" />
+    <Content Include="Packages\JQueryScrollbar\JQueryScrollbar.js" />
+    <Content Include="Packages\JQueryTimer\demo.html" />
+    <Content Include="Packages\JQueryTimer\jquery.timer.js" />
+    <Content Include="Packages\JQueryTimer\res\demo.js" />
+    <Content Include="Packages\JQueryTimer\res\img\1.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\10.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\11.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\12.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\13.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\14.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\15.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\16.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\17.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\2.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\3.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\4.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\5.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\6.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\7.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\8.jpg" />
+    <Content Include="Packages\JQueryTimer\res\img\9.jpg" />
+    <Content Include="Packages\JQueryTimer\res\jquery.min.js" />
+    <Content Include="Packages\JQueryTimer\res\style.css" />
+    <Content Include="Packages\JQueryUI\Content\AUTHORS.txt" />
+    <Content Include="Packages\JQueryUI\Content\external\globalize.culture.de-DE.js" />
+    <Content Include="Packages\JQueryUI\Content\external\globalize.culture.ja-JP.js" />
+    <Content Include="Packages\JQueryUI\Content\external\globalize.js" />
+    <Content Include="Packages\JQueryUI\Content\external\jquery.mousewheel.js" />
+    <Content Include="Packages\JQueryUI\Content\external\jshint.js" />
+    <Content Include="Packages\JQueryUI\Content\external\qunit.css" />
+    <Content Include="Packages\JQueryUI\Content\external\qunit.js" />
+    <Content Include="Packages\JQueryUI\Content\Gruntfile.js" />
+    <Content Include="Packages\JQueryUI\Content\MIT-LICENSE.txt" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery-ui.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery-ui.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.accordion.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.all.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.autocomplete.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.base.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.button.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.core.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.datepicker.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.dialog.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.menu.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.progressbar.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.resizable.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.selectable.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.slider.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.spinner.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.tabs.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.theme.css" />
+    <Content Include="Packages\JQueryUI\Content\themes\ui-lightness\jquery.ui.tooltip.css" />
+    <Content Include="Packages\JQueryUI\CSS\images\animated-overlay.gif" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-icons_222222_256x240.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-icons_454545_256x240.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-icons_888888_256x240.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-icons_9b9b9b_256x240.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Packages\JQueryUI\CSS\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Packages\JQueryUI\CSS\JQueryUI.css" />
+    <Content Include="Packages\JQueryUI\CSS\JQueryUIContextMenu.css" />
+    <Content Include="Packages\JQueryUI\CSS\JQueryUIMenuBar.css" />
+    <Content Include="Packages\JQueryUI\CSS\JQueryUI_Overrides.css" />
+    <Content Include="Packages\JQueryUI\JQueryUI1.10.3.js" />
+    <Content Include="Packages\JQueryUI\JQueryUI1.11.0.js" />
+    <Content Include="Packages\JQueryUI\JQueryUIContextMenu.js" />
+    <Content Include="Packages\JQueryUI\JQueryUIMenuBar.js" />
+    <Content Include="Packages\JQueryUI\JQueryUIOthers.js" />
+    <Content Include="Packages\JQuery\JQuery1.9.1.js" />
+    <Content Include="Packages\JQuery\JQueryNodeListener.js" />
+    <Content Include="Packages\JQuery\JQueryOthers.js" />
+    <Content Include="Packages\JQuery\JQueryResize.js" />
+    <Content Include="Packages\Modernizr\modernizr.custom.69132.js" />
+    <Content Include="Packages\VDF\VDF.js" />
+    <Content Include="Packages\VDF\VDFLoader.js" />
+    <Content Include="Packages\VDF\VDFNode.js" />
+    <Content Include="Packages\VDF\VDFSaver.js" />
+    <Content Include="Packages\VDF\VDFTokenParser.js" />
+    <Content Include="Packages\VDF\VDFTypeInfo.js" />
+    <Content Include="Packages\V\V.js" />
+    <Content Include="Packages\V\VDebug.js" />
+    <Content Include="Packages\V\VMessageBox.js" />
+    <Content Include="Packages\V\VResizable.js" />
+    <Content Include="Packages\V\VTabView.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Packages\JQueryUI\Content\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Packages\Fonts\Questrial.woff" />
+    <Content Include="Packages\Fonts\WeblySleek UI\Base.ttf" />
+    <Content Include="Packages\Fonts\WeblySleek UI\Base.ttf.meta" />
+    <Content Include="Packages\Fonts\WeblySleek UI\Bold.ttf" />
+    <Content Include="Packages\Fonts\WeblySleek UI\Bold.ttf.meta" />
+    <Content Include="Packages\Fonts\WeblySleek UI\BoldItalic.ttf" />
+    <Content Include="Packages\Fonts\WeblySleek UI\BoldItalic.ttf.meta" />
+    <Content Include="Packages\Fonts\WeblySleek UI\Italic.ttf" />
+    <Content Include="Packages\Fonts\WeblySleek UI\Italic.ttf.meta" />
+    <Content Include="Packages\Fonts\WeblySleek UI\Semibold.ttf" />
+    <Content Include="Packages\Fonts\WeblySleek UI\Semibold.ttf.meta" />
+    <Content Include="Packages\Fonts\WeblySleek UI\SemiboldItalic.ttf" />
+    <Content Include="Packages\Fonts\WeblySleek UI\SemiboldItalic.ttf.meta" />
+    <Content Include="Packages\Images\Buttons\ResizeBlock.pdn" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Packages\Bootstrap\.editorconfig" />
+    <Content Include="Packages\Bootstrap\.travis.yml" />
+    <Content Include="Packages\Bootstrap\bower.json" />
+    <Content Include="Packages\Bootstrap\browserstack.json" />
+    <Content Include="Packages\Bootstrap\CNAME" />
+    <Content Include="Packages\Bootstrap\composer.json" />
+    <Content Include="Packages\Bootstrap\CONTRIBUTING.md" />
+    <Content Include="Packages\Bootstrap\js\.jshintrc" />
+    <Content Include="Packages\Bootstrap\less\alerts.less" />
+    <Content Include="Packages\Bootstrap\less\badges.less" />
+    <Content Include="Packages\Bootstrap\less\bootstrap.less" />
+    <Content Include="Packages\Bootstrap\less\breadcrumbs.less" />
+    <Content Include="Packages\Bootstrap\less\button-groups.less" />
+    <Content Include="Packages\Bootstrap\less\buttons.less" />
+    <Content Include="Packages\Bootstrap\less\carousel.less" />
+    <Content Include="Packages\Bootstrap\less\close.less" />
+    <Content Include="Packages\Bootstrap\less\code.less" />
+    <Content Include="Packages\Bootstrap\less\component-animations.less" />
+    <Content Include="Packages\Bootstrap\less\dropdowns.less" />
+    <Content Include="Packages\Bootstrap\less\forms.less" />
+    <Content Include="Packages\Bootstrap\less\grid.less" />
+    <Content Include="Packages\Bootstrap\less\input-groups.less" />
+    <Content Include="Packages\Bootstrap\less\jumbotron.less" />
+    <Content Include="Packages\Bootstrap\less\labels.less" />
+    <Content Include="Packages\Bootstrap\less\list-group.less" />
+    <Content Include="Packages\Bootstrap\less\media.less" />
+    <Content Include="Packages\Bootstrap\less\mixins.less" />
+    <Content Include="Packages\Bootstrap\less\modals.less" />
+    <Content Include="Packages\Bootstrap\less\navbar.less" />
+    <Content Include="Packages\Bootstrap\less\navs.less" />
+    <Content Include="Packages\Bootstrap\less\normalize.less" />
+    <Content Include="Packages\Bootstrap\less\pager.less" />
+    <Content Include="Packages\Bootstrap\less\pagination.less" />
+    <Content Include="Packages\Bootstrap\less\panels.less" />
+    <Content Include="Packages\Bootstrap\less\popovers.less" />
+    <Content Include="Packages\Bootstrap\less\print.less" />
+    <Content Include="Packages\Bootstrap\less\progress-bars.less" />
+    <Content Include="Packages\Bootstrap\less\responsive-utilities.less" />
+    <Content Include="Packages\Bootstrap\less\scaffolding.less" />
+    <Content Include="Packages\Bootstrap\less\tables.less" />
+    <Content Include="Packages\Bootstrap\less\thumbnails.less" />
+    <Content Include="Packages\Bootstrap\less\tooltip.less" />
+    <Content Include="Packages\Bootstrap\less\type.less" />
+    <Content Include="Packages\Bootstrap\less\utilities.less" />
+    <Content Include="Packages\Bootstrap\less\variables.less" />
+    <Content Include="Packages\Bootstrap\less\wells.less" />
+    <Content Include="Packages\Bootstrap\LICENSE" />
+    <Content Include="Packages\Bootstrap\package.json" />
+    <Content Include="Packages\Bootstrap\README.md" />
+    <Content Include="Packages\Bootstrap\_config.yml" />
+    <Content Include="Packages\JQueryEditable\Makefile" />
+    <Content Include="Packages\JQueryEditable\README.textile" />
+    <Content Include="Packages\JQueryTimer\README.md" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
