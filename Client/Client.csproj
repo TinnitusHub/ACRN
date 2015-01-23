@@ -79,18 +79,10 @@
     <Content Include="#Ancient\Frame2\MainMenu.js" />
     <Content Include="#Ancient\Frame2\Settings.js" />
     <Content Include="Games\CreativeDefense\DevelopmentTree\DevelopmentTree.js" />
-    <Content Include="Main.html" />
-    <Content Include="Main.js" />
-    <Content Include="Others\Tools\ACRN\ACRNData.js" />
-    <Content Include="Others\Tools\ToneMatcher\ToneMatcher.js" />
-    <Content Include="Others\Tools\Noise\#Ancient\ACRN.js" />
-    <Content Include="Others\Tools\Noise\#Ancient\crn.css" />
-    <Content Include="Others\Tools\Noise\#Ancient\desktop.js" />
-    <Content Include="Others\Tools\Noise\#Ancient\mobile.js" />
-    <Content Include="Others\Tools\Noise\#Ancient\VNoise.html" />
-    <Content Include="Others\Tools\ACRN\ACRN.js" />
-    <Content Include="Others\Tools\Noise\NoiseData.js" />
-    <Content Include="Others\Tools\Noise\Noise.js" />
+    <Content Include="index.html" />
+    <Content Include="index.js" />
+    <Content Include="Tools\ACRN\ACRNData.js" />
+    <Content Include="Tools\ACRN\ACRN.js" />
     <Content Include="Packages\#Ancient\images\animated-overlay.gif" />
     <Content Include="Packages\#Ancient\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="Packages\#Ancient\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
@@ -489,6 +481,14 @@
     <Content Include="Packages\V\VMessageBox.js" />
     <Content Include="Packages\V\VResizable.js" />
     <Content Include="Packages\V\VTabView.js" />
+    <Content Include="Tools\Noise\#Ancient\ACRN.js" />
+    <Content Include="Tools\Noise\#Ancient\crn.css" />
+    <Content Include="Tools\Noise\#Ancient\desktop.js" />
+    <Content Include="Tools\Noise\#Ancient\mobile.js" />
+    <Content Include="Tools\Noise\#Ancient\VNoise.html" />
+    <Content Include="Tools\Noise\Noise.js" />
+    <Content Include="Tools\Noise\NoiseData.js" />
+    <Content Include="Tools\ToneMatcher\ToneMatcher.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Packages\JQueryUI\Content\README.md" />

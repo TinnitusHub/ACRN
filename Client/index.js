@@ -5,27 +5,13 @@ var FrameUI = function()
 	self.toneMatcher = new ToneMatcherUI();
 	self.noise = new NoiseUI();
 	self.acrn = new ACRNUI();
-    self.pageMapRoot = FromVDF(V.Multiline(function() {/*
-{name:'V' children:[^]}
-##	{name:'Stories'}
-	{name:'Games' children:[^]}
-		{name:'Creative Defense' children:[^]}
-			{name:'Development Tree'}
-	{name:'Others' children:[^]}
-		{name:'Tools' children:[^]}
-			{name:'Tone Matcher'}
-			{name:'Noise'}
-			{name:'ACRN'}
-    */}));
-	if (GetUrlVars(CurrentUrl()).user != "Venryx")
-	{
-		self.pageMapRoot = FromVDF(V.Multiline(function() {/*
-{name:'V' children:[^]}
+	self.pageMapRoot = FromVDF(V.Multiline(function() {/*
+{name:'Tools' children:[^]} ##{name:'Root' children:[^]}
 ##	{name:'Tone Matcher'}
-	{name:'Noise'}
+##	{name:'Noise'}
 	{name:'ACRN'}
-		*/}));
-	}
+	*/
+	}));
 
 	// early ui setup
 	// ==========
@@ -87,6 +73,8 @@ var FrameUI = function()
 			background: green;
 			display: none;
 		}
+
+		#topMenuContent > div > div:first-child { display: none !important; }
 		</style>
 		<div id="topMenu" style="position: relative; z-index: 1; width: 100%; margin-bottom: 10; #border-radius: 0 0 150px 150px; #background: rgba(255, 255, 255, .5);">
             <div id="topMenuContent" style="text-align: center;">
@@ -147,14 +135,14 @@ var FrameUI = function()
 	}
 
 	self.IsPageOpen = function(page) { return self.openPage == page; };
-	function GetPagePath(page)
+	/*function GetPagePath(page)
 	{
 		if (page == "noise")
 			return "/others/tools/noise";
 		if (page == "acrn")
 			return "/others/tools/acrn";
 		return "";
-	}
+	}*/
 	self.OpenPage = function(page, /*optional:*/ callback, allowMakeNewHistoryEntry)
 	{
 		allowMakeNewHistoryEntry = allowMakeNewHistoryEntry != null ? allowMakeNewHistoryEntry : true;
@@ -163,8 +151,8 @@ var FrameUI = function()
 		if (oldPage)
 			self.ClosePage(oldPage, page);
 
-		if (oldPage != null && oldPage != page && allowMakeNewHistoryEntry)
-			history.pushState({}, "", GetPagePath(page));
+		//if (oldPage != null && oldPage != page && allowMakeNewHistoryEntry)
+		//	history.pushState({}, "", GetPagePath(page));
 
 		self[page].Show(R("#page"));
 	    //self.SetSubButtonActive(page, true);
@@ -210,10 +198,12 @@ var FrameUI = function()
     	//self.OpenPage("MainMenu");
     	//if (vars.page)
     	//    self.OpenPage(vars.page);
-		if (pathNodes.length > 1)
+		/*if (pathNodes.length > 1)
 			self.OpenPage(pathNodes[pathNodes.length - 1].replace(/-(.)/g, function(match, group1) { return group1.toUpperCase(); }), null, allowMakeNewHistoryEntry); // maybe temp
 		else // if no page specified, open the DevelopmentTest page (for now)
-			self.OpenPage("noise", null, allowMakeNewHistoryEntry);
+			self.OpenPage("noise", null, allowMakeNewHistoryEntry);*/
+
+		self.OpenPage("acrn");
 
 		// run in-url script commands (for in-browser testing)
 		if (vars.runJS)
@@ -427,7 +417,7 @@ var FrameUI = function()
 		if (parent.frames.length) //window.top != window //window.frameElement) // if in iframe, set window-location to actual site
 		    top.location = "http://venryx.herokuapp.com";
 
-	    LoadURL();
+		LoadURL();
 
 	    self.ResizePage();
     };
