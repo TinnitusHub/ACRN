@@ -411,8 +411,8 @@ var FrameUI = function()
 		// startup
 	    // ----------
 
-		if (parent.frames.length) //window.top != window //window.frameElement) // if in iframe, set window-location to actual site
-		    top.location = "http://venryx.herokuapp.com";
+		//if (parent.frames.length) //window.top != window //window.frameElement) // if in iframe, set window-location to actual site
+		//    top.location = "http://venryx.herokuapp.com";
 
 		LoadURL();
 
